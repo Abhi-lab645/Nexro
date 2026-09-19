@@ -3,6 +3,12 @@
 # NEXRO (ನೆಕ್ಸ್ರೋ)
 ### Decentralized Labour Cooperative Platform for On-Demand Home Services
 
+[![Live Web Application](https://img.shields.io/badge/Live%20Portal-abhi--lab645.github.io%2FNexro-10b981?style=for-the-badge&logo=githubpages&logoColor=white)](https://abhi-lab645.github.io/Nexro/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhi-lab645/Nexro)
+[![Deploy to Render](https://img.shields.io/badge/Deploy%20to-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com/deploy?repo=https://github.com/Abhi-lab645/Nexro)
+
+<br/>
+
 [![PostgreSQL 18](https://img.shields.io/badge/PostgreSQL-18-blue.svg?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20+-green.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -14,6 +20,11 @@
   <b>Replaces commission-extracting aggregators with primary labour cooperative societies.</b><br/>
   Statutory financial splits (85/5/10), predictive demand rebalancing, real-time dispatch, and worker social security.
 </p>
+
+### 🔗 Quick Access
+| 🌐 Live Web Portal | 🐙 GitHub Source Code | ☁️ 1-Click Cloud Deploy |
+| :---: | :---: | :---: |
+| [**Open Live Application**](https://abhi-lab645.github.io/Nexro/) | [**View Repository**](https://github.com/Abhi-lab645/Nexro) | [**Deploy on Render**](https://render.com/deploy?repo=https://github.com/Abhi-lab645/Nexro) |
 
 </div>
 
@@ -155,6 +166,23 @@ Running side-by-side in dual iOS Simulators:
 | :---: | :---: |
 | <img src="docs/screenshots/society_dashboard_stitch.png" width="460" alt="Society Dashboard"/> | <img src="docs/screenshots/federation_dashboard_stitch.png" width="460" alt="Federation Dashboard"/> |
 | *Live dispatch monitoring, duty rosters, dispute arbitration.* | *Cross-society workforce rebalancing, welfare reserve audits.* |
+
+> 🌐 **Live Web Application**: The operational portal is hosted and live at **[https://abhi-lab645.github.io/Nexro/](https://abhi-lab645.github.io/Nexro/)**.
+
+---
+
+## 📲 Instant Access & Presentation QR Codes
+
+Scan directly from a mobile device or drag these cards directly into your presentation slides:
+
+<div align="center">
+
+| 🌐 Live Hosted Web Portal | 🐙 GitHub Source Code |
+| :---: | :---: |
+| <img src="docs/screenshots/ppt_card_live_portal.png" width="340" alt="Live Web Portal QR Card"/> | <img src="docs/screenshots/ppt_card_github.png" width="340" alt="GitHub Repository QR Card"/> |
+| [**Open Live Application**](https://abhi-lab645.github.io/Nexro/)<br/>`abhi-lab645.github.io/Nexro` | [**View Source Code**](https://github.com/Abhi-lab645/Nexro)<br/>`github.com/Abhi-lab645/Nexro` |
+
+</div>
 
 ---
 
