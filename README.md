@@ -3,6 +3,8 @@
 # NEXRO (ನೆಕ್ಸ್ರೋ)
 ### Decentralized Labour Cooperative Platform for On-Demand Home Services
 
+[![Smart India Hackathon 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-orange.svg?style=for-the-badge&logo=target)](https://sih.gov.in/)
+[![Team Infinity](https://img.shields.io/badge/Team-INFINITY-purple.svg?style=for-the-badge)](https://github.com/Abhi-lab645/Nexro)
 [![Live Web Application](https://img.shields.io/badge/Live%20Portal-abhi--lab645.github.io%2FNexro-10b981?style=for-the-badge&logo=githubpages&logoColor=white)](https://abhi-lab645.github.io/Nexro/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhi-lab645/Nexro)
 
@@ -17,7 +19,7 @@
 
 <p align="center">
   <b>Replaces commission-extracting aggregators with primary labour cooperative societies.</b><br/>
-  Statutory financial splits (85/5/10), predictive demand rebalancing, real-time dispatch, and worker social security.
+  Validated statutory unit economics (92/2/6), predictive demand rebalancing, real-time dispatch, and worker social security.
 </p>
 
 ### 🔗 Quick Access
@@ -33,12 +35,12 @@
 
 Commercial on-demand service aggregators extract **25% to 35%** platform fees per booking while offering zero social security, opaque algorithmic dispatch, and unilateral account deactivations.
 
-**Nexro** is an open cooperative platform that transitions gig workers into registered cooperative shareholders. All transactions run through a PostgreSQL-backed statutory ledger that programmatically guarantees an immutable **85/5/10** settlement split:
+**Nexro** is an open cooperative platform developed for **Smart India Hackathon 2026 (Team Infinity)** that transitions gig workers into registered cooperative shareholders. All transactions run through a PostgreSQL-backed statutory ledger that programmatically guarantees an immutable **92/2/6** settlement split:
 
-* **85% Worker Payout**: Disbursed immediately to the certified worker's account upon two-party OTP completion.
-* **5% Social Security & Welfare Fund**: Credited to the worker's cooperative passbook for group hospitalization, emergency loans, and maternity benefits.
-* **10% Cooperative Operations**: Retained by the local Ward Cooperative Society to fund tools, training, grievance redressal, and dispute resolution.
-* **0% Aggregator Rent-Seeking**: Nexro does not extract predatory per-gig commissions.
+* **92% Worker Payout (₹920 per ₹1,000)**: Disbursed directly and immediately to the certified worker's account upon two-party OTP completion.
+* **2% Social Security & Welfare Fund (₹20 per ₹1,000)**: Credited to the worker's cooperative passbook for group hospitalization, emergency accident loans, and life coverage.
+* **6% Platform & Cooperative Operations (₹60 per ₹1,000)**: Retained for sustainable technical operations, tooling, customer grievance redressal, and society desks.
+* **0% Aggregator Rent-Seeking**: Nexro eliminates the 25–35% extractive intermediary commissions charged by commercial gig apps.
 
 ---
 
@@ -157,7 +159,7 @@ Running side-by-side in dual iOS Simulators:
 | Consumer Mobile App (Port 8081) | Worker Mobile App (Port 8082) |
 | :---: | :---: |
 | <img src="docs/screenshots/sim_consumer_iphone17.png" width="360" alt="Nexro Consumer App"/> | <img src="docs/screenshots/sim_worker_iphone17pro.png" width="360" alt="Nexro Worker App"/> |
-| *Ward-verified booking, AI problem intake, real-time OTP tracking.* | *85% net earnings, on-duty GPS beacon, ₹5L insurance shield.* |
+| *Ward-verified booking, AI problem intake, real-time OTP tracking.* | *92% net earnings, on-duty GPS beacon, ₹5L insurance shield.* |
 
 ### 2. Cooperative Society & Federation Governance Portals
 
@@ -185,19 +187,91 @@ Scan directly from a mobile device or drag these cards directly into your presen
 
 ---
 
+## 📈 Feasibility, Viability & Operational Pilot (SIH 2026)
+
+> *"Practical to build. Scalable to deploy. Sustainable for the long term. Viable today. Greater impact tomorrow."*  
+> — **Team Infinity | Smart India Hackathon 2026**
+
+<div align="center">
+
+<img src="docs/screenshots/sih2026_feasibility_viability.png" width="100%" alt="Smart India Hackathon 2026 Feasibility and Viability"/>
+
+</div>
+
+### 1. 🎯 Operational Pilot Scope
+Nexro launches with a focused, verifiable district pilot designed to prove cooperative unit economics and member adoption:
+
+| Operational Dimension | Pilot Specification | Details & Criteria |
+| :--- | :--- | :--- |
+| **Pilot Geography** | **01 District** | Initial urban district cluster |
+| **Primary Cooperatives** | **2–3 Societies** | Verified registered Labour Cooperative Societies |
+| **Certified Workforce** | **~100 Workers** | Certified gig tradesmen with ITI / NSQF credentials |
+| **Launch Service Trades** | **4 Core Verticals** | 🔧 **Electrician**, 🚰 **Plumber**, 🪚 **Carpenter**, 🖌️ **Painter** |
+
+---
+
+### 2. 💰 Unit Economics & Financial Sustainability (Per ₹1,000 Booking)
+
+```
+                    TOTAL BOOKING VALUE: ₹1,000
+                                  │
+         ┌────────────────────────┼────────────────────────┐
+         ▼                        ▼                        ▼
+     ₹920 (92%)                ₹20 (2%)                 ₹60 (6%)
+  Certified Worker        Worker Welfare Fund     Platform & Society Ops
+  (Immediate Payout)     (Passbook & Insurance)     (Tech & Support Desks)
+```
+
+| Financial Parameter | Pilot Target / Metrics | Operational Significance |
+| :--- | :--- | :--- |
+| **Direct Worker Cut** | **92% (₹920)** | Eliminates 25–35% commercial platform commissions; maximizes take-home pay. |
+| **Social Security Reserve** | **2% (₹20)** | Automatically credited to worker passbook for emergency accident & hospitalization shield. |
+| **Platform & Society Ops** | **6% (₹60)** | Sustainable budget for cloud hosting, tooling, grievance resolution, and society desks. |
+| **Estimated Pilot Running Cost**| **₹20,000 / month** | Lean cloud, verification, and cooperative administration budget. |
+| **Monthly Break-Even Point** | **~334 bookings / month** | **Only ~11 bookings per day across 2–3 societies** to achieve full operational sustainability. |
+
+---
+
+### 3. ⚙️ Technical Feasibility: Built & Ready to Scale
+
+* **Technically Ready**: Uses mature, battle-tested APIs across Maps/Geolocation, UPI Instant Payouts, WebSockets, and Push Notifications.
+* **Working Core Flow**: The end-to-end lifecycle is fully validated and passing in automated integration tests:  
+  $$\text{Book} \longrightarrow \text{Match} \longrightarrow \text{Serve} \longrightarrow \text{Pay} \longrightarrow \text{Log}$$
+* **Modular Architecture**: Independent microservices (Node.js Gateway, Python Demand AI, React Native mobile clients, Vite web governance portal) allowing horizontal scaling district by district.
+
+---
+
+### 4. 🚀 Strategic Drivers: Why Now?
+
+1. **Massive Cooperative Workforce Without Digital Access**: Millions of skilled tradesmen are organized in registered cooperatives but lack modern smartphone intake channels.
+2. **Surging Consumer Demand for Trusted Local Trades**: Customers demand verified, background-checked, and fairly-priced home services without hidden surge algorithms.
+3. **Supportive Policy Momentum**: Government initiatives and legal frameworks (Social Security Code, Platform Worker Welfare Acts) create strong institutional tailwinds for cooperative gig models.
+
+---
+
+### 5. 🛡️ Key Challenges & Concrete Mitigation Strategies
+
+| Key Operational Challenge | Root Cause Analysis | Nexro Architectural Mitigation |
+| :--- | :--- | :--- |
+| **1. Service Skill Disparity** | Skill levels and trade specializations vary across cooperative societies. | **Skill Census & Practical Assessment**: Mandatory digital skill verification; phased rollout with certified trades and NSQF Level 4 compliance. |
+| **2. Incumbent Aggregator Dominance** | Competing against heavily funded, entrenched commercial platforms. | **Hyperlocal Anchor Demand**: Concentrated rollout in 1 district; anchor high-volume recurring demand from Housing Societies (RWAs), hostels, and institutions. |
+| **3. Uneven Smartphone Access** | Uneven digital literacy and device access among elder or migrant tradesmen. | **Assisted Society Desks + Voice Input**: Society physical dispatch desks for walk-ins + multilingual voice-enabled problem intake on mobile. |
+
+---
+
 ## Core Financial & Operational Mechanics
 
-### Statutory 85/5/10 Settlement Engine
+### Statutory 92/2/6 Settlement Engine
 When a booking is completed, the client transmits the customer OTP to the backend. The settlement engine runs inside an atomic PostgreSQL transaction with row-level locks (`SELECT ... FOR UPDATE`):
 
 ```javascript
 // Excerpt from nexro-backend/src/services/statutoryFinanceService.js
 const total = parseFloat(booking.total_amount);
-const workerPayout = parseFloat((total * 0.85).toFixed(2));     // 85% to certified worker
-const welfareAmount = parseFloat((total * 0.05).toFixed(2));    // 5% to worker welfare fund
-const societyOpsAmount = parseFloat((total * 0.10).toFixed(2)); // 10% to primary cooperative society
+const workerPayout = parseFloat((total * 0.92).toFixed(2));     // 92% directly to certified worker (₹920 per ₹1,000)
+const welfareAmount = parseFloat((total * 0.02).toFixed(2));    // 2% to worker welfare fund (₹20 per ₹1,000)
+const societyOpsAmount = parseFloat((total * 0.06).toFixed(2)); // 6% to platform & cooperative operations (₹60 per ₹1,000)
 
-// 1. Mark booking completed & record split
+// 1. Mark booking completed & record statutory split
 await client.query(
   `UPDATE bookings 
    SET status = 'completed', worker_payout = $1, welfare_amount = $2, 
@@ -235,7 +309,7 @@ If a ward exceeds the critical threshold ($\text{Pressure} > 1.25$), the engine 
 ### 1. Clone & Configure Environment
 
 ```bash
-git clone https://github.com/Abhi-lab645/Nexrop.git
+git clone https://github.com/Abhi-lab645/Nexro.git
 cd Nexrop
 ```
 
@@ -356,7 +430,7 @@ npm run test:backend
 6. Real-time booking creation and geofence-based worker assignment (`POST /api/bookings`)
 7. WebSocket channel handshake and bidirectional event distribution (`/ws`)
 8. Two-party OTP completion validation (`POST /api/bookings/:id/verify-otp`)
-9. Atomic statutory settlement execution (Worker: 85%, Welfare: 5%, Co-op: 10%)
+9. Atomic statutory settlement execution (Worker: 92%, Welfare: 2%, Co-op & Platform: 6%)
 10. Cooperative passbook credit balance audit (`GET /api/workers/:id/passbook`)
 
 ---
@@ -384,7 +458,7 @@ Both mobile applications can be tested directly on iOS or Android using the **Ex
 ### Bookings & Operations
 * `POST /api/bookings`: Create booking, lock escrow, and dispatch nearest certified worker.
 * `GET /api/bookings/:id`: Retrieve live status, assigned pro location, and OTP state.
-* `POST /api/bookings/:id/verify-otp`: Submit customer verification OTP, finalize booking, and trigger atomic 85/5/10 settlement.
+* `POST /api/bookings/:id/verify-otp`: Submit customer verification OTP, finalize booking, and trigger atomic 92/2/6 settlement.
 * `POST /api/emergency`: Priority dispatch for urgent utility breakdowns (gas, electrical hazards).
 
 ### Cooperative Societies & Workers
@@ -402,7 +476,7 @@ Both mobile applications can be tested directly on iOS or Android using the **Ex
 ## Security & Privacy Guidelines
 
 * **Never commit `.env` files**: Local database credentials, Firebase service account keys, and JWT secrets must strictly stay local.
-* **Statutory Compliance**: The 85/5/10 settlement formula is locked by database-level constraints. Any financial alteration requires multi-signature governance approval recorded in the audit trail.
+* **Statutory Compliance**: The 92/2/6 settlement formula is locked by database-level constraints. Any financial alteration requires multi-signature governance approval recorded in the audit trail.
 * **Worker Data Rights**: Worker location beacons are active strictly while toggled **ON DUTY**. Disconnecting or completing shifts immediately terminates background telemetry tracking.
 
 ---

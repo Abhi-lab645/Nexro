@@ -133,14 +133,14 @@ async function runTests() {
     console.error('❌ TEST 7: OTP Verification Failed', otpRes);
   }
 
-  // 8. Atomic Statutory 85/5/10 Financial Settlement
+  // 8. Atomic Statutory 92/2/6 Financial Settlement
   const completeRes = await post(`http://127.0.0.1:5001/api/bookings/${bookingId}/complete`, {
     workerDiagnosis: 'Panel tightened and neutral pole load balanced.',
     photoProofUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300'
   });
   if (completeRes.status === 200 && completeRes.data.split) {
     const s = completeRes.data.split;
-    console.log(`✅ TEST 8: Statutory 85/5/10 Settlement (Worker 85%: ₹${s.workerCut}, Welfare 5%: ₹${s.welfareCut}, Ops 10%: ₹${s.societyOps}, Aggregator: ₹${s.aggregatorCommission}) -> PASS`);
+    console.log(`✅ TEST 8: Statutory 92/2/6 Settlement (Worker 92%: ₹${s.workerCut}, Welfare 2%: ₹${s.welfareCut}, Ops 6%: ₹${s.societyOps}, Aggregator: ₹${s.aggregatorCommission}) -> PASS`);
     passed++;
   } else {
     console.error('❌ TEST 8: Settlement Failed', completeRes);

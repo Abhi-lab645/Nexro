@@ -33,7 +33,7 @@ app.get('/api/health', (req, res) => {
     port: process.env.PORT || 5001,
     database: 'PostgreSQL 18 (nexro_db)',
     webSockets: 'active on /ws',
-    statutorySplit: '85% Worker / 5% Welfare / 10% Society Ops / 0% Aggregator',
+    statutorySplit: '92% Worker / 2% Welfare / 6% Platform & Co-op Ops / 0% Aggregator',
     timestamp: new Date().toISOString()
   });
 });
@@ -60,6 +60,6 @@ server.listen(PORT, () => {
   console.log(`🏛️  NEXRO CENTRAL BACKEND GATEWAY ACTIVE ON PORT ${PORT}`);
   console.log(`⚡  Real-Time WebSockets listening on ws://localhost:${PORT}/ws`);
   console.log(`🐘  Connected to PostgreSQL 18 (database: nexro_db)`);
-  console.log(`⚖️  Statutory 85/5/10 Financial Ledger Engine Armed`);
+  console.log(`⚖️  Statutory 92/2/6 Financial Ledger Engine Armed`);
   console.log(`======================================================\n`);
 });

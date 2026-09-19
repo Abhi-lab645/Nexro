@@ -4,13 +4,17 @@ import { socketService } from './socketService.js';
 
 export class StatutoryFinanceService {
   /**
-   * Calculate statutory 85/5/10 breakdown
+   * Calculate statutory financial breakdown
+   * Validated Pilot Economics (SIH 2026): 92% Worker / 2% Welfare / 6% Platform & Co-op Operations
    */
   static calculateSplit(totalAmount) {
     const total = parseFloat(totalAmount);
-    const workerCut = parseFloat((total * 0.85).toFixed(2));
-    const welfareCut = parseFloat((total * 0.05).toFixed(2));
-    const societyOps = parseFloat((total - workerCut - welfareCut).toFixed(2)); // exactly 10%
+    const workerRate = parseFloat(process.env.SPLIT_WORKER_PCT || '0.92');
+    const welfareRate = parseFloat(process.env.SPLIT_WELFARE_PCT || '0.02');
+
+    const workerCut = parseFloat((total * workerRate).toFixed(2));
+    const welfareCut = parseFloat((total * welfareRate).toFixed(2));
+    const societyOps = parseFloat((total - workerCut - welfareCut).toFixed(2)); // exactly 6% platform & co-op
     const aggregatorCommission = 0.00; // Zero aggregator cut
 
     return {
