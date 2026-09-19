@@ -380,6 +380,38 @@ Both mobile applications can be tested directly on iOS or Android using the **Ex
 
 ---
 
+## Hosting & Production Deployment
+
+### 1. Live Web Portal (GitHub Pages)
+The Cooperative Society & Federation Governance Portal is configured for automated CI/CD deployment via GitHub Actions:
+* **Live Deployment URL**: [https://abhi-lab645.github.io/Nexro/](https://abhi-lab645.github.io/Nexro/)
+* Workflow definition: [`.github/workflows/deploy-portal.yml`](.github/workflows/deploy-portal.yml)
+
+### 2. Turnkey Cloud Hosting (Render Blueprint)
+Deploy the full stack (Managed PostgreSQL + Node.js Express Gateway + FastAPI Demand AI + Web Portal) using the included Infrastructure-as-Code blueprint:
+1. In the [Render Dashboard](https://dashboard.render.com/), click **New +** $\rightarrow$ **Blueprint**.
+2. Select your repository `Abhi-lab645/Nexro`.
+3. Render parses [`render.yaml`](render.yaml) and provisions:
+   * **`nexro-db`**: Managed PostgreSQL database with schema and seed migrations.
+   * **`nexro-backend`**: Node.js Gateway & WebSockets (`:10000`).
+   * **`nexro-ai-service`**: Python FastAPI microservice (`:10000`).
+   * **`nexro-web-portal`**: Static frontend portal with global CDN routing.
+
+### 3. Containerized Cloud VPS Deployment (Docker Compose)
+For deployment to any cloud virtual machine (AWS EC2, DigitalOcean, Hetzner, GCP):
+
+```bash
+# Clone the repository on your server
+git clone https://github.com/Abhi-lab645/Nexro.git
+cd Nexro
+
+# Spin up all 4 microservices with a single command
+docker compose up -d --build
+```
+Containers include automated health checks, volume persistence for PostgreSQL, and reverse-proxy bindings.
+
+---
+
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.

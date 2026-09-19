@@ -1,0 +1,72 @@
+services:
+  # 1. Central Backend Gateway (Node.js Express + WebSockets + Statutory Ledger)
+  - type: web
+    name: nexro-backend
+    runtime: node
+    plan: free
+    rootDir: nexro-backend
+    buildCommand: npm install
+    startCommand: node src/db/migrate.js && node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: PGHOST
+        fromDatabase:
+          name: nexro-db
+          property: host
+      - key: PGPORT
+        fromDatabase:
+          name: nexro-db
+          property: port
+      - key: PGDATABASE
+        fromDatabase:
+          name: nexro-db
+          property: database
+      - key: PGUSER
+        fromDatabase:
+          name: nexro-db
+          property: user
+      - key: PGPASSWORD
+        fromDatabase:
+          name: nexro-db
+          property: password
+      - key: AI_SERVICE_URL
+        fromService:
+          type: web
+          name: nexro-ai-service
+          property: host
+      - key: JWT_SECRET
+        generateValue: true
+
+  # 2. Demand AI Microservice (Python 3 / FastAPI / Uvicorn)
+  - type: web
+    name: nexro-ai-service
+    runtime: python
+    plan: free
+    rootDir: nexro-ai-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PORT
+        value: 10000
+
+  # 3. Cooperative & Federation Web Portal (React 18 / Vite)
+  - type: web
+    name: nexro-web-portal
+    runtime: static
+    rootDir: nexro-web-portal
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases:
+  # Managed PostgreSQL Database
+  - name: nexro-db
+    plan: free
+    databaseName: nexro_db
+    user: nexro_admin
