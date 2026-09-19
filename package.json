@@ -1,0 +1,25 @@
+{
+  "name": "nexro-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nexro — Labour Cooperative Gig Services Platform Monorepo",
+  "scripts": {
+    "dev:backend": "./open-backend.sh",
+    "dev:admin": "./open-admin.sh",
+    "dev:consumer": "./open-consumer.sh",
+    "dev:worker": "./open-worker.sh",
+    "consumer": "cd nexro-consumer-app && npx expo start --ios --port 8081",
+    "worker": "cd nexro-worker-app && npx expo start --ios --port 8082",
+    "consumer:start": "cd nexro-consumer-app && npx expo start --port 8081",
+    "worker:start": "cd nexro-worker-app && npx expo start --port 8082",
+    "admin": "./open-admin.sh",
+    "admin:dev": "cd nexro-web-portal && npm run dev -- --port 3000 --host",
+    "backend": "./open-backend.sh",
+    "backend:node": "cd nexro-backend && node server.js",
+    "backend:ai": "cd nexro-ai-service && uvicorn main:app --host 0.0.0.0 --port 8000",
+    "backend:migrate": "cd nexro-backend && node src/db/migrate.js",
+    "test:backend": "cd nexro-backend && node test-backend-suite.js",
+    "consumer:clean": "cd nexro-consumer-app && npx expo start -c",
+    "worker:clean": "cd nexro-worker-app && npx expo start -c"
+  }
+}
