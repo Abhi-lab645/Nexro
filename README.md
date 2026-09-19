@@ -5,7 +5,6 @@
 
 [![Live Web Application](https://img.shields.io/badge/Live%20Portal-abhi--lab645.github.io%2FNexro-10b981?style=for-the-badge&logo=githubpages&logoColor=white)](https://abhi-lab645.github.io/Nexro/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhi-lab645/Nexro)
-[![Deploy to Render](https://img.shields.io/badge/Deploy%20to-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com/deploy?repo=https://github.com/Abhi-lab645/Nexro)
 
 <br/>
 
@@ -22,9 +21,9 @@
 </p>
 
 ### 🔗 Quick Access
-| 🌐 Live Web Portal | 🐙 GitHub Source Code | ☁️ 1-Click Cloud Deploy |
-| :---: | :---: | :---: |
-| [**Open Live Application**](https://abhi-lab645.github.io/Nexro/) | [**View Repository**](https://github.com/Abhi-lab645/Nexro) | [**Deploy on Render**](https://render.com/deploy?repo=https://github.com/Abhi-lab645/Nexro) |
+| 🌐 Live Web Portal | 🐙 GitHub Source Code |
+| :---: | :---: |
+| [**Open Live Application**](https://abhi-lab645.github.io/Nexro/) | [**View Repository**](https://github.com/Abhi-lab645/Nexro) |
 
 </div>
 
@@ -415,17 +414,7 @@ The Cooperative Society & Federation Governance Portal is configured for automat
 * **Live Deployment URL**: [https://abhi-lab645.github.io/Nexro/](https://abhi-lab645.github.io/Nexro/)
 * Workflow definition: [`.github/workflows/deploy-portal.yml`](.github/workflows/deploy-portal.yml)
 
-### 2. Turnkey Cloud Hosting (Render Blueprint)
-Deploy the full stack (Managed PostgreSQL + Node.js Express Gateway + FastAPI Demand AI + Web Portal) using the included Infrastructure-as-Code blueprint:
-1. In the [Render Dashboard](https://dashboard.render.com/), click **New +** $\rightarrow$ **Blueprint**.
-2. Select your repository `Abhi-lab645/Nexro`.
-3. Render parses [`render.yaml`](render.yaml) and provisions:
-   * **`nexro-db`**: Managed PostgreSQL database with schema and seed migrations.
-   * **`nexro-backend`**: Node.js Gateway & WebSockets (`:10000`).
-   * **`nexro-ai-service`**: Python FastAPI microservice (`:10000`).
-   * **`nexro-web-portal`**: Static frontend portal with global CDN routing.
-
-### 3. Containerized Cloud VPS Deployment (Docker Compose)
+### 2. Containerized Cloud VPS Deployment (Docker Compose)
 For deployment to any cloud virtual machine (AWS EC2, DigitalOcean, Hetzner, GCP):
 
 ```bash
@@ -433,7 +422,7 @@ For deployment to any cloud virtual machine (AWS EC2, DigitalOcean, Hetzner, GCP
 git clone https://github.com/Abhi-lab645/Nexro.git
 cd Nexro
 
-# Spin up all 4 microservices with a single command
+# Spin up all microservices with a single command
 docker compose up -d --build
 ```
 Containers include automated health checks, volume persistence for PostgreSQL, and reverse-proxy bindings.
